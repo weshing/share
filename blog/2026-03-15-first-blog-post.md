@@ -2,7 +2,7 @@
 slug: first-blog-post
 title: 第一篇博客文章
 authors: [slorber, yangshun]
-tags: [hola, docusaurus]
+tags: [hello, docusaurus]
 ---
 
 Lorem ipsum dolor sit amet...

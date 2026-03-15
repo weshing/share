@@ -1,6 +1,6 @@
 yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
+  name: 杨俊
+  title: 前 Meta Staff 工程师，GreatFrontEnd 联合创始人
   url: https://linkedin.com/in/yangshun
   image_url: https://github.com/yangshun.png
   page: true
@@ -12,11 +12,11 @@ yangshun:
 
 slorber:
   name: Sébastien Lorber
-  title: Docusaurus maintainer
+  title: Docusaurus 维护者
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
   page:
-    # customize the url of the author page at /blog/authors/<permalink>
+    # 自定义作者页面 URL：/blog/authors/<permalink>
     permalink: '/all-sebastien-lorber-articles'
   socials:
     x: sebastienlorber

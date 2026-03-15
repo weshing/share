@@ -4,15 +4,16 @@
 // 有多种等效方式声明您的 Docusaurus 配置。
 // 参见: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
+import searchLocal from "@cmfcmf/docusaurus-search-local";
 
 // 这在 Node.js 中运行 - 不要在此处使用客户端代码（浏览器 API、JSX...）
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '我的网站',
-  tagline: '恐龙很酷',
-  favicon: 'img/favicon.ico',
+  title: "Share",
+  tagline: "We are SH Shing",
+  favicon: "img/favicon.ico",
 
   // 未来标志，参见 https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,55 +21,63 @@ const config = {
   },
 
   // 在此设置您站点的生产 URL
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://sh.shing.cc",
   // 设置您的站点所在的 /<baseUrl>/ 路径名
   // 对于 GitHub pages 部署，通常是 '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages 部署配置。
   // 如果您不使用 GitHub pages，则不需要这些。
-  organizationName: 'facebook', // 通常是您的 GitHub 组织/用户名。
-  projectName: 'docusaurus', // 通常是您的仓库名称。
+  organizationName: "weshing", // 通常是您的 GitHub 组织/用户名。
+  projectName: "share", // 通常是您的仓库名称。
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: "throw",
 
   // 即使您不使用国际化，也可以使用此字段设置
   // 有用的元数据，如 html lang。例如，如果您的站点是中文，
   // 可能需要将 "en" 替换为 "zh-Hans"。
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
   },
+
+  plugins: [
+    [
+      searchLocal,
+      {
+        language: ["en", "zh"],
+      },
+    ],
+  ],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // 请将此更改为您自己的仓库。
           // 删除此行以移除"编辑此页面"链接。
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/weshing/shing/",
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: "最新文章",
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // 请将此更改为您自己的仓库。
           // 删除此行以移除"编辑此页面"链接。
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/weshing/shing/",
           // 有用的选项，用于强制执行博客最佳实践
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -78,75 +87,67 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // 替换为您项目的社交卡片
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '我的网站',
+        title: "WeShing",
         logo: {
-          alt: '我的网站 Logo',
-          src: 'img/logo.svg',
+          alt: "WeShing Logo",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '教程',
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            position: "left",
+            label: "教程",
           },
-          {to: '/blog', label: '博客', position: 'left'},
+          { to: "/blog", label: "博客", position: "left" },
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/weshing/shing",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: '文档',
+            title: "文档",
             items: [
               {
-                label: '教程',
-                to: '/docs/intro',
+                label: "教程",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: '社区',
+            title: "社区",
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: "X",
+                href: "https://x.com/",
               },
             ],
           },
           {
-            title: '更多',
+            title: "更多",
             items: [
               {
-                label: '博客',
-                to: '/blog',
+                label: "博客",
+                to: "/blog",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: "GitHub",
+                href: "https://github.com/weshing/shing/",
               },
             ],
           },
         ],
-        copyright: `版权所有 © ${new Date().getFullYear()} 我的项目，使用 Docusaurus 构建。`,
+        copyright: `版权所有 © ${new Date().getFullYear()} WeShing`,
       },
       prism: {
         theme: prismThemes.github,

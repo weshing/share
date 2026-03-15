@@ -10,7 +10,7 @@ sidebar_position: 1
 
 开始**创建一个新站点**。
 
-或者**立即试用 share**，访问 **[weshing.com](https://github.com/weshing/share)**。
+或者**立即试用 share**，访问 **[weshing](https://github.com/weshing/share)**。
 
 ### 环境要求
 
