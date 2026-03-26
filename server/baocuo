@@ -1,0 +1,8 @@
+# Error opening terminal: xterm-ghostty.
+
+### **在 Ghostty 配置文件中加入：**
+```
+term = xterm-256color
+```
+
+然后重启 Ghostty，再 SSH 进去即可。

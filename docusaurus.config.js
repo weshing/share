@@ -59,7 +59,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // 请将此更改为您自己的仓库。
           // 删除此行以移除"编辑此页面"链接。
-          editUrl: "https://github.com/weshing/shing/",
+          editUrl: "https://github.com/weshing/share/",
         },
         blog: {
           showReadingTime: true,
@@ -70,7 +70,7 @@ const config = {
           },
           // 请将此更改为您自己的仓库。
           // 删除此行以移除"编辑此页面"链接。
-          editUrl: "https://github.com/weshing/shing/",
+          editUrl: "https://github.com/weshing/share/",
           // 有用的选项，用于强制执行博客最佳实践
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -106,7 +106,7 @@ const config = {
           },
           { to: "/blog", label: "博客", position: "left" },
           {
-            href: "https://github.com/weshing/shing",
+            href: "https://github.com/weshing/share",
             label: "GitHub",
             position: "right",
           },
@@ -142,7 +142,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/weshing/shing/",
+                href: "https://github.com/weshing/share/",
               },
             ],
           },
