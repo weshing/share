@@ -1,41 +1,79 @@
-# 网站
+# Share 文档站点
 
-这个网站使用 [Docusaurus](https://docusaurus.io/) 构建，这是一个现代化的静态网站生成器。
+基于 [Docusaurus 3.9.2](https://docusaurus.io/) 构建的静态文档网站。
 
-## 安装依赖
+## 功能特性
 
-```bash
-yarn
+- 多栏目文档：教程、mac、ubuntu、工具
+- 侧边栏支持分类展开/折叠
+- 支持目录索引页（generated-index）
+- 内置本地搜索（支持中英文）
+- 支持暗黑模式
+
+## 目录结构
+
+```
+docs/
+├── mac/                    # mac 终端优化栏目
+│   ├── _category_.json
+│   ├── index.md
+│   ├── 目录111/
+│   │   ├── _category_.json
+│   │   ├── ghostty.md
+│   │   └── intro.md
+│   └── 目录222/
+├── ubuntu/                 # Ubuntu 栏目
+│   ├── _category_.json
+│   ├── index.md
+│   ├── 目录2/
+│   └── 目录3/
+├── tool/                   # 工具栏目
+│   ├── _category_.json
+│   ├── index.md
+│   └── NewTab/
+├── 配置说明.md             # 配置说明文档
+└── ...
 ```
 
-## 本地开发
+## 配置文件说明
+
+### docusaurus.config.js
+
+**路径**: `/Users/molt/github/weshing/share/docusaurus.config.js`
+
+关键配置：
+- 第14行: `title` - 网站标题
+- 第100-113行: `navbar.items` - 顶部导航栏配置
+
+### sidebars.js
+
+**路径**: `/Users/molt/github/weshing/share/sidebars.js`
+
+定义了所有栏目的侧边栏结构：
+- 第4-9行: `tutorialSidebar` - 教程侧边栏
+- 第10-30行: `macSidebar` - mac侧边栏  
+- 第31-51行: `ubuntuSidebar` - ubuntu侧边栏
+- 第52-63行: `toolSidebar` - 工具侧边栏
+
+### _category_.json
+
+各栏目目录下的配置文件，控制显示和排序。
+
+## 常用命令
 
 ```bash
-yarn start
+npm install          # 安装依赖
+npm start            # 本地开发
+npm run build        # 构建生产版本
+npm run serve        # 预览构建结果
+npm run clear        # 清除缓存
 ```
 
-此命令启动本地开发服务器并打开浏览器窗口。大多数更改会实时反映，无需重新启动服务器。
+## 添加新栏目
 
-## 构建生产版本
+详细步骤参考 `docs/配置说明.md`
 
-```bash
-yarn build
-```
+## 参考资料
 
-此命令将静态内容生成到 `build` 目录中，可以使用任何静态内容托管服务进行部署。
-
-## 部署
-
-使用 SSH 部署：
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-不使用 SSH 部署：
-
-```bash
-GIT_USER=<您的 GitHub 用户名> yarn deploy
-```
-
-如果您使用 GitHub Pages 托管，此命令是一种便捷的方式来构建网站并推送到 `gh-pages` 分支。
+- [Docusaurus 官方文档](https://docusaurus.io/docs)
+- `docs/配置说明.md`
