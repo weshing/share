@@ -1,0 +1,9 @@
+{
+  "label": "目录2",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "目录2",
+    "description": "目录2下的文档"
+  }
+}

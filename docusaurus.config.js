@@ -57,8 +57,6 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          // 请将此更改为您自己的仓库。
-          // 删除此行以移除"编辑此页面"链接。
           editUrl: "https://github.com/weshing/share/",
         },
         blog: {
@@ -105,6 +103,9 @@ const config = {
             label: "教程",
           },
           { to: "/blog", label: "博客", position: "left" },
+          { type: "docSidebar", sidebarId: "macSidebar", position: "left", label: "mac" },
+          { type: "docSidebar", sidebarId: "ubuntuSidebar", position: "left", label: "ubuntu" },
+          { type: "docSidebar", sidebarId: "toolSidebar", position: "left", label: "tool" },
           {
             href: "https://github.com/weshing/share",
             label: "GitHub",
