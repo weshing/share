@@ -1,0 +1,14 @@
+facebook:
+  label: Facebook
+  permalink: /facebook
+  description: Facebook 相关
+
+hello:
+  label: 你好
+  permalink: /hello
+  description: 问候相关
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus 相关
